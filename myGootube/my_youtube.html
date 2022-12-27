@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyGooTube</title>
+</head>
+<body>
+<div>
+<img src="C:\workSpace\GooTube.PNG" class="logo">
+  <div>
+    <input placeholder="궁금한 것을 검색해보자!" class="inputbox" size="50" type="search" aria-live="polite" id="inputBox">  
+    <button type="button" id="button">검색</button>
+    <a id="aTag" style="display:none">갈까요?</a>
+  </div>
+</div>
+</body>
+
+<script>
+// TODO 1. 인풋박스에 검색어를 넣는다.
+// 1. 인풋 박스에 검색어를 넣는다. 인풋박스에 넣은 검색어를 가져온다.
+var text = document.getElementById("inputBox");
+var button = document.getElementById("button");
+var aTag = document.getElementById("aTag");
+//  2. 검색 버튼을 누른다 
+// youtube/results?search_query="검색어" 쿼리에 검색어가 합쳐진다.
+//  요청을 보낸다.
+button.addEventListener("click",function(e){
+    aTagOnEvent();
+    // https://www.youtube.com/results?search_query=%EB%86%8D%EA%B5%AC
+});
+// 3. inputBox 값이 변경되고 엔터를 누르면 a 태그가 클릭된다.
+text.addEventListener("focus",function(e){
+  text.addEventListener("keydown",function(e){
+    console.log("나 찍혔어");
+    console.log(e);
+    if(e.keyCode === 13){
+      console.log("나 진짜 찍혔어");
+      aTagOnEvent();
+    }    
+  })
+})
+// javaScript에서는 함수도 변수다. 오... 
+let aTagOnEvent = function(){
+  var url = "https://youtube.com/results?search_query="+text.value;
+      aTag.href=url;
+      aTag.click();
+}
+</script>
+</html>

@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+
+header{ 
+    max-width: 680px ;
+    width: 100%;
+    background-color: black;
+}
+header ul{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header ul div{
+    display: flex;
+}
+header ul div li{
+    padding: 4px;
+}
+
+.youtubeLogo{
+    color: red;
+}
+
+
+
+
+
+
+

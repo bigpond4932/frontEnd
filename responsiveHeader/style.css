@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    font-size: x-large;
+    justify-content: space-between;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center; 
+    color: white;
+    padding: 10px;
+}
+.nav__logos i{
+    color: burlywood;
+}
+
+
+.nav__list{
+    font-size: large;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.nav__list li {
+    padding: 8px 12px;
+}
+.nav__list li:hover {
+    background-color: darkseagreen;
+    padding: 8px 10px;
+}
+
+.nav__icons ul{
+    display: flex;
+    font-size: medium;
+}
+.nav__icons ul li{
+    padding: 8px 12px;
+    font-size: large;
+    list-style: none;
+}
+.nav__icons ul li i:hover{
+    background-color: darkseagreen;
+    padding: 3px;
+}
+
+.button{
+    display: none;
+}
+@media screen and (max-width: 760px) {
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav__list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .nav__list li{
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .nav__icons{
+        display: flex;
+        width: 100%;
+    }
+    .nav__icons ul{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding : 0;
+    }
+    .button{
+        display: block;
+        position: absolute;
+        right: 34px;
+        align-items: flex-start;
+        color: greenyellow;
+    }
+
+
+
+}
