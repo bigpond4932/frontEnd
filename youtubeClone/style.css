@@ -47,21 +47,25 @@ header ul div li{
     padding: 5px;
 }
 .title{
+    width: 680px;
     max-width: 680px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 .title div{
     display: flex;
     align-items: flex-start;
 }
 .videoTitle{
+    font-size: x-large;
     font-weight: bold;
 }
 .dropButton{
     color: gray;
-    margin-left: 15px;
-    font-size: small
+    font-size: small;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 .title span{
     color: grey;
@@ -69,24 +73,79 @@ header ul div li{
 }
 
 
-
+/* TODO 
+buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
+버튼 DIV 밑에 선이 있었으면 좋겠다.
+*/
 .buttons{
+    width: 680px;
     margin: 0px;
     padding: 0px;
     display: flex;
     list-style: none;
     justify-content: space-between;
+    color: grey;
+    border-bottom: solid;
+    border-bottom-color: grey;
+    border-bottom-width: 0.1px;
 }
 .buttons li{
     display: flex;
-    padding: 25px;
+    padding: 20px 35px 35px 35px;
     font-size: large;
+    font-weight: bold;
     flex-direction: column;
     text-align: center;
-    boar
 }
-
-
+.buttons li i{
+    padding: 10px;
+    font-size: x-large;
+}
+.onClick{
+    color: cornflowerblue;
+}
+/* 
+프로필 로고를 동그랗게 잘라서 보여주고 싶다. => width, height, boder
+*/
+.channelInfo{
+    display: flex;
+    max-width: 680px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+.channelInfo div{
+    display: flex;
+    align-items: center;
+}
+.channelInfo img{
+    border: groove;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.channelInfo ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.channelInfo ul li{
+    padding-left: 20px;
+}
+.channelName{
+    font-size: x-large;
+    font-weight: bold;
+}
+.subscribers{
+    font-size: small;
+    color: grey;
+}
+.channelInfo button{
+    background: none;
+	border: none;
+    font-size: large;
+    font-weight: bold;
+    color: gray;
+}
 
 
 
