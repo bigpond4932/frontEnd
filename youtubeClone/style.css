@@ -3,7 +3,7 @@ body{
 }
 
 header{ 
-    max-width: 680px ;
+    max-width: 680px;
     width: 100%;
     background-color: black;
 }
@@ -29,11 +29,14 @@ header ul div li{
     color: red;
 }
 
+.info{
+    margin-left: 10px;
+}
 .hashTag{
     list-style: none;
     display: flex;
-    padding: 0px;
-    margin: 5px;
+    padding: 5px 0px 0px 0px;
+    margin: 0;
 }
 .hashTag li{
     font-size: small;
@@ -41,9 +44,46 @@ header ul div li{
 .hashTag li a{
     text-decoration: none;
     color: darkblue;
+    padding: 5px;
 }
+.title{
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+}
+.title div{
+    display: flex;
+    align-items: flex-start;
+}
+.videoTitle{
+    font-weight: bold;
+}
+.dropButton{
+    color: gray;
+    margin-left: 15px;
+    font-size: small
+}
+.title span{
+    color: grey;
+    font-size: small;
+}
+
+
+
 .buttons{
-    
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.buttons li{
+    display: flex;
+    padding: 25px;
+    font-size: large;
+    flex-direction: column;
+    text-align: center;
+    boar
 }
 
 
