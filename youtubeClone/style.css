@@ -1,9 +1,9 @@
 body{
     margin: 0;
+    overflow: scroll;
 }
 
 header{ 
-    max-width: 680px;
     width: 100%;
     background-color: black;
 }
@@ -20,12 +20,14 @@ header ul{
 
 header ul div{
     display: flex;
+    align-items: center;
 }
 header ul div li{
     padding: 4px;
 }
 
 .youtubeLogo{
+    font-size: x-large;
     color: red;
 }
 
@@ -39,16 +41,19 @@ header ul div li{
     margin: 0;
 }
 .hashTag li{
-    font-size: small;
+    font-size: medium;
 }
 .hashTag li a{
     text-decoration: none;
     color: darkblue;
     padding: 5px;
 }
+video{
+    width : 100%;
+    max-width: 1000px;
+}
 .title{
-    width: 680px;
-    max-width: 680px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -78,7 +83,7 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
 버튼 DIV 밑에 선이 있었으면 좋겠다.
 */
 .buttons{
-    width: 680px;
+    width: 100%;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -109,9 +114,13 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
 */
 .channelInfo{
     display: flex;
-    max-width: 680px;
+    width: 100%;
     padding-top: 10px;
+    padding-bottom: 20px;
     justify-content: space-between;
+    border-bottom: solid;
+    border-bottom-color: grey;
+    border-bottom-width: 0.1px;
 }
 .channelInfo div{
     display: flex;
@@ -146,6 +155,70 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
     font-weight: bold;
     color: gray;
 }
+/* 
+TODO 
+1. upnext 마진 위아래 주기
+1-1. 영상 설명 li에 마진 주기
+2. 옆에 땡떙이 버튼에 마진 레프트 주기
+*/
+
+.relatedVideo{
+    width: 100%;
+    margin: 10px 0px 0px 10px;  /*위 오른쪽 밑 왼쪽*/
+}
+.relatedVideo ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}   
+
+.relatedVideo ul li{
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
+
+.relatedVideo ul li div{
+    display: flex;
+    margin: 0px 20px 0px 0px;
+}
+.upNextImage{
+    width: 100%;
+    flex: 1 1 10%;
+}
+
+.relatedVideo ul li .videoTitle{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 80%;
+}
+
+.relatedVideo ul li button{
+    height: 100%;
+    flex: 1 1 10%;
+    background: none;
+	border: none;
+    font-size: large;
+    margin-right: 0px;
+}
+.relatedVideo ul li {
+    font-size: medium;
+}
+.relTitle{
+    font-size: large;
+    display: block;
+}
+.reChannelName{
+    font-size: medium;
+    color: darkgray;
+}
+.reChannelViews{
+    font-size: small;
+    color: darkgray;
+}
+
+
+
+
 
 
 
