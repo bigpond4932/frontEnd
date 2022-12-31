@@ -24,10 +24,10 @@ header ul div{
 }
 header ul div li{
     padding: 4px;
+    font-size: xx-large;
 }
 
 .youtubeLogo{
-    font-size: x-large;
     color: red;
 }
 
@@ -51,6 +51,8 @@ header ul div li{
 video{
     width : 100%;
     max-width: 1000px;
+    position: sticky;
+    top: 0px;
 }
 .title{
     width: 100%;
@@ -216,7 +218,11 @@ TODO
     color: darkgray;
 }
 
-
+@media (max-width: 1000px) {
+    body .video{
+        max-width: none;
+    }
+}
 
 
 
