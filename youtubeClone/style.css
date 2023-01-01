@@ -24,7 +24,7 @@ header ul div{
 }
 header ul div li{
     padding: 4px;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .youtubeLogo{
@@ -50,9 +50,11 @@ header ul div li{
 }
 video{
     width : 100%;
+    height: 80%;
     max-width: 1000px;
     position: sticky;
     top: 0px;
+    /* object-fit: cover; */
 }
 .title{
     width: 100%;
@@ -65,13 +67,13 @@ video{
     align-items: flex-start;
 }
 .videoTitle{
-    font-size: x-large;
+    font-size: 20px;
     font-weight: bold;
 }
 .dropButton{
     color: gray;
     font-size: small;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-right: 10px;
 }
 .title span{
@@ -83,30 +85,36 @@ video{
 /* TODO 
 buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
 버튼 DIV 밑에 선이 있었으면 좋겠다.
+버튼이 화면이 줄어들 때도 변함없이 5개가 보였으면 좋겠다.
 */
+.buttonsDiv{
+    display: block;
+    margin-top: 20px;
+}
 .buttons{
     width: 100%;
     margin: 0px;
     padding: 0px;
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     color: grey;
     border-bottom: solid;
     border-bottom-color: grey;
     border-bottom-width: 0.1px;
 }
 .buttons li{
+    width: 100%;
     display: flex;
-    padding: 20px 35px 35px 35px;
-    font-size: large;
+    padding-bottom: 20px;
+    font-size: 15px;
     font-weight: bold;
     flex-direction: column;
     text-align: center;
 }
 .buttons li i{
-    padding: 10px;
-    font-size: x-large;
+    padding: 10px 10px;
+    font-size: large;
 }
 .onClick{
     color: cornflowerblue;
@@ -118,7 +126,7 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
     display: flex;
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     justify-content: space-between;
     border-bottom: solid;
     border-bottom-color: grey;
@@ -139,11 +147,11 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
     padding: 0px;
     list-style: none;
 }
-.channelInfo ul li{
+/* .channelInfo ul li{
     padding-left: 20px;
-}
+} */
 .channelName{
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
 }
 .subscribers{
@@ -155,13 +163,15 @@ buttons가 스크린이 확장되어도 벗어나지 않도록 한다.
 	border: none;
     font-size: large;
     font-weight: bold;
-    color: gray;
+    color: red;
 }
 /* 
 TODO 
 1. upnext 마진 위아래 주기
 1-1. 영상 설명 li에 마진 주기
 2. 옆에 땡떙이 버튼에 마진 레프트 주기
+
+relatedVideo의 뚱뚱한 점이 너무 싫다.
 */
 
 .relatedVideo{
@@ -185,25 +195,25 @@ TODO
 }
 .upNextImage{
     width: 100%;
-    flex: 1 1 10%;
 }
 
 .relatedVideo ul li .videoTitle{
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
-    flex: 1 1 80%;
+    /* flex: 1 1 60%; */
 }
 
 .relatedVideo ul li button{
     height: 100%;
-    flex: 1 1 10%;
     background: none;
 	border: none;
     font-size: large;
-    margin-right: 0px;
+    margin-right: 5px;
 }
 .relatedVideo ul li {
     font-size: medium;
+    object-fit: contain;
 }
 .relTitle{
     font-size: large;
@@ -218,8 +228,8 @@ TODO
     color: darkgray;
 }
 
-@media (max-width: 1000px) {
-    body .video{
+@media (width > 1000px) {
+    .video{
         max-width: none;
     }
 }
